@@ -1,0 +1,11 @@
+<h1>Create a New Blog Entry </h1>
+
+<%= form_for @post do |field| %>
+    <%= field.text_field(:title, { class: "form-control", placeholder: "Title" }) %>
+    <%= field.text_field(:body, { placeholder: "Body" }) %>
+    <%= field.text_field(:feeling, { placeholder: "Feeling" }) %>
+    <%= field.submit "Submit Entry" %>
+<% end %>
+
+<h6><a href="/"> Back to Blog Index </a> </h3>
+

@@ -1,0 +1,18 @@
+<h1>List of Blog Entries</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<%= link_to "Add Post", new_post_path %>
+
+<h2>Posts:</h3>
+<ul>
+    <% @posts.each do |p| %>
+        <div class="post container">
+            
+            <div class="container">
+                <li>
+                    <%= link_to p.title, post_path(p) %>
+                </li>
+            </div>
+        </div>
+    <% end %>
+</ul>
